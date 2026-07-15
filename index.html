@@ -49,11 +49,13 @@
       position: fixed;
       bottom: 8px;
       left: 50%;
-      transform: translateX(-50%);
+      transform: translate(-50%, 0);
       width: min(96px, 22vw);
       height: auto;
       pointer-events: none;
       user-select: none;
+      transition: width 0.35s ease, transform 0.35s ease,
+                  left 0.35s ease, bottom 0.35s ease;
     }
 
     main {
@@ -64,10 +66,9 @@
        and bottom screen edges, ~20% of page area (image aspect ≈ 1.26) */
     @media (min-width: 1025px) {
       .mascot {
-        left: auto;
-        right: 0;
+        left: 100%;
         bottom: 0;
-        transform: translate(15%, 15%);
+        transform: translate(-85%, 15%);
         width: min(38vw, 94vh);
       }
 
