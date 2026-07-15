@@ -55,15 +55,15 @@
       padding-bottom: 120px;
     }
 
-    /* Mascot: bigger screens — bottom left, 15% below the screen edge,
-       ~20% of page area (image aspect ratio ≈ 1.25) */
+    /* Mascot: bigger screens — bottom right, tucked 15% beyond the right
+       and bottom screen edges, ~20% of page area (image aspect ≈ 1.26) */
     @media (min-width: 1025px) {
       .mascot {
-        left: 2vw;
+        left: auto;
+        right: 0;
         bottom: 0;
-        transform: translateY(15%);
-        width: 38vw;
-        max-height: 75vh;
+        transform: translate(15%, 15%);
+        width: min(38vw, 94vh);
       }
 
       main {
