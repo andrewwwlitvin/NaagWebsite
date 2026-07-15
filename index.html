@@ -38,6 +38,38 @@
       display: inline-block;
       width: 0.9em;
     }
+
+    /* Mascot: phones/tablets — bottom center, thumb-sized */
+    .mascot {
+      position: fixed;
+      bottom: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(96px, 22vw);
+      height: auto;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    main {
+      padding-bottom: 120px;
+    }
+
+    /* Mascot: bigger screens — bottom left, 15% below the screen edge,
+       ~20% of page area (image aspect ratio ≈ 1.25) */
+    @media (min-width: 1025px) {
+      .mascot {
+        left: 2vw;
+        bottom: 0;
+        transform: translateY(15%);
+        width: 38vw;
+        max-height: 75vh;
+      }
+
+      main {
+        padding-bottom: 0;
+      }
+    }
   </style>
 </head>
 <body>
@@ -48,5 +80,6 @@
     <p>we co-create. we grow. we prosper.</p>
     <p>&copy; on journey since 2023.</p>
   </main>
+  <img class="mascot" src="mascot.png" alt="naag mascot — a cobra wearing sunglasses" onerror="this.style.display='none'">
 </body>
 </html>
