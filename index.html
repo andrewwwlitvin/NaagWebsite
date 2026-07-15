@@ -34,9 +34,13 @@
       text-decoration: none;
     }
 
-    /* Custom naag cursor on interactive states */
+    /* Custom naag cursor on interactive elements and all text */
     a, a:hover, a:active, button, [onclick] {
-      cursor: url('cursor.png') 32 15, pointer;
+      cursor: url('cursor.png') 16 8, pointer;
+    }
+
+    p {
+      cursor: url('cursor.png') 16 8, text;
     }
 
     .gap {
